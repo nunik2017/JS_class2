@@ -34,6 +34,7 @@ class School {
     }
   }
   
+  //Create child class of School
   class PrimarySchool extends School {
     constructor(name, numberOfStudents, pickupPolicy) {
       super(name, 'primary', numberOfStudents);
@@ -44,7 +45,7 @@ class School {
       return this._pickupPolicy;
     }
   }
-  
+   //Create child class of School
   class HighSchool extends School {
     constructor(name, numberOfStudents, sportsTeams) {
       super(name, 'high', numberOfStudents);
@@ -56,11 +57,13 @@ class School {
     }
   }
   
+  //Create new PrimarySchool instance
   const lorraineHansbury = new PrimarySchool('Lorraine Hansbury', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13.')
   
   lorraineHansbury.quickFacts();
   School.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli']);
   
+  //Create new HighSchool instance
   const alSmith = new HighSchool('Al E. Smith', 415, ['Baseball', 'Basketball', 'Volleyball', 'Track and Field']);
   
   console.log(alSmith.sportsTeams);
